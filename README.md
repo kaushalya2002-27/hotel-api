@@ -4,7 +4,15 @@ SEN4303 Advanced Database Systems, Assignment 3. Backend: Laravel 13 (PHP 8.3), 
 
 ## How to run
 1. Install dependencies: `composer install`
-2. Create the env file: `copy .env.example .env`
+2. Create the env file: `copy .env.example .env`, then change the database lines in `.env` to:
+   ```
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=hotel_db
+   DB_USERNAME=root
+   DB_PASSWORD=
+   ```
 3. Generate the app key: `php artisan key:generate`
 4. Start MySQL (XAMPP) and import `database/hotel_db.sql` (phpMyAdmin Import, or `mysql -u root < database/hotel_db.sql`)
 5. Start the server: `php artisan serve`
